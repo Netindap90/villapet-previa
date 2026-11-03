@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Villa Pet Espaço Animal — Campinas/SP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14284B;--mid:#3F70AE;--sky:#DCE9F7;--gold:#F2B93B;--bg:#fff;--soft:#F1F6FC;--ink:#10203D;--muted:#52627F;--line:#D9E4F2;--tile:#DCE9F7;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1629;--soft:#12213B;--ink:#E8EFFA;--muted:#9FB0CC;--line:#243857;--tile:#1B3052;--sky:#1B3052}}
+:root[data-theme="dark"]{--bg:#0B1629;--soft:#12213B;--ink:#E8EFFA;--muted:#9FB0CC;--line:#243857;--tile:#1B3052;--sky:#1B3052}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.12;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(28px,4vw,42px);color:var(--ink)}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:88px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.97)}
+.btn-wa{background:var(--gold);color:var(--navy);box-shadow:0 8px 22px rgba(242,185,59,.35)}
+.btn-wa:hover{box-shadow:0 12px 28px rgba(242,185,59,.5)}
+.btn-line{border-color:rgba(255,255,255,.7);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.14)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-out{border-color:var(--line);color:var(--ink)}
+.btn svg{width:20px;height:20px;flex:none}
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .3s,box-shadow .3s}
+header.solid{background:var(--navy);box-shadow:0 6px 24px rgba(10,20,40,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:19px}
+.brand svg{width:34px;height:34px}
+nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0}
+nav a{color:#fff;text-decoration:none;font-weight:500;font-size:15px;opacity:.92;position:relative}
+nav a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--gold);transition:width .25s}
+nav a:hover::after{width:100%}
+.burger{display:none;background:none;border:0;width:46px;height:46px;color:#fff;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:#fff;margin:6px auto;transition:transform .25s,opacity .2s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media(max-width:760px){
+.burger{display:block}
+nav{position:absolute;left:0;right:0;top:100%;background:var(--navy);max-height:0;overflow:hidden;transition:max-height .35s}
+nav.open{max-height:320px}
+nav ul{flex-direction:column;gap:0;padding:8px 22px 18px}
+nav a{display:block;padding:14px 0;font-size:18px}
+section{padding:64px 0}
+}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden;padding:110px 0 70px;background:var(--navy)}
+.hero>svg{position:absolute;inset:0;width:100%;height:100%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,28,56,.92) 0%,rgba(14,28,56,.7) 45%,rgba(14,28,56,.1) 100%)}
+@media(max-width:760px){.hero::after{background:linear-gradient(180deg,rgba(14,28,56,.55),rgba(14,28,56,.92))}}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(40px,7vw,76px);max-width:11em}
+.hero p.lead{font-size:clamp(17px,2vw,20px);max-width:30em;margin:22px 0 34px;color:#E3ECF8}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.credit{position:absolute;right:18px;bottom:14px;z-index:2;font-size:12px;color:#C9D8EE;opacity:.85}
+.in{opacity:0;transform:translateY(14px);animation:up .8s .15s forwards cubic-bezier(.2,.7,.2,1)}
+.in.d2{animation-delay:.3s}.in.d3{animation-delay:.45s}
+@keyframes up{to{opacity:1;transform:none}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.in,.rv{opacity:1;transform:none;animation:none;transition:none}.btn,nav a::after{transition:none}}
+/* sobre */
+.about{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.about p{color:var(--muted);margin-top:18px;font-size:18px}
+.about .art{background:var(--tile);border-radius:28px;aspect-ratio:5/4;overflow:hidden}
+.about .art svg{width:100%;height:100%;display:block}
+@media(max-width:760px){.about{grid-template-columns:1fr;gap:30px}}
+/* serviços */
+.sv{background:var(--soft)}
+.head{max-width:640px;margin-bottom:44px}
+.head p{color:var(--muted);margin-top:12px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(20,40,75,.16)}
+.card .pic{aspect-ratio:16/10;background:var(--navy);display:grid;place-items:center}
+.card .pic svg{width:96px;height:96px;transition:transform .4s}
+.card:hover .pic svg{transform:scale(1.1) rotate(-4deg)}
+.card .bd{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:24px}
+.card p{color:var(--muted);font-size:16px;flex:1}
+.card .btn{margin-top:12px;min-height:46px;align-self:flex-start}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
+/* diferenciais */
+.vals{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.val{padding:30px 24px 10px 0}
+.val+.val{padding-left:24px;border-left:1px solid var(--line)}
+.val svg{width:40px;height:40px;color:var(--mid);margin-bottom:14px}
+.val h3{font-size:22px;margin-bottom:6px}
+.val p{color:var(--muted);font-size:16px}
+@media(max-width:860px){.vals{grid-template-columns:1fr 1fr}.val{border-left:0!important;padding:26px 14px 10px 0!important;border-bottom:1px solid var(--line)}}
+@media(max-width:480px){.vals{grid-template-columns:1fr}}
+/* galeria */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:14px}
+.tile{border-radius:20px;background:var(--tile);display:grid;place-items:center;position:relative;overflow:hidden;transition:transform .3s}
+.tile:hover{transform:scale(1.02)}
+.tile svg{width:42%;max-width:110px;color:var(--navy)}
+.tile:nth-child(2){background:var(--navy);grid-column:span 2;grid-row:span 2}
+.tile:nth-child(2) svg{color:var(--gold);width:34%;max-width:170px}
+.tile:nth-child(4){background:var(--gold)}
+.tile:nth-child(5){grid-column:span 2}
+.tile small{position:absolute;left:14px;bottom:10px;font-size:12px;color:var(--muted)}
+.tile:nth-child(2) small{color:#B7C8E4}
+.tile:nth-child(4) small{color:var(--navy)}
+@media(prefers-color-scheme:dark){.tile svg{color:#DCE9F7}.tile:nth-child(4) svg{color:var(--navy)}}
+@media(max-width:700px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:140px}.tile:nth-child(2){grid-column:span 2;grid-row:span 1}.tile:nth-child(5){grid-column:span 2}}
+.note{font-size:13px;color:var(--muted);margin-top:16px}
+/* instagram */
+.ig{background:var(--soft);padding:44px 0}
+.ig .wrap{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+.ig p{color:var(--muted)}
+.ig b{color:var(--ink);font-family:Fraunces,Georgia,serif;font-size:22px;display:block}
+/* local */
+.loc{display:grid;grid-template-columns:1.1fr 1fr;gap:34px}
+.map{border-radius:24px;overflow:hidden;background:var(--tile);min-height:340px;position:relative;display:flex}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map .pin{position:absolute;left:18px;right:18px;bottom:18px;background:var(--bg);border-radius:16px;padding:18px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;box-shadow:0 10px 30px rgba(10,20,40,.25)}
+.map .pin address{font-style:normal;font-size:15px;line-height:1.4}
+.map .btn{min-height:44px;padding:0 20px;font-size:15px}
+.hours{background:var(--soft);border-radius:24px;padding:28px}
+.hours h3{font-size:24px;margin-bottom:14px}
+.hours ul{list-style:none;margin:0;padding:0}
+.hours li{display:flex;justify-content:space-between;padding:11px 12px;border-radius:10px;font-size:16px}
+.hours li.today{background:var(--navy);color:#fff;font-weight:600}
+.hours li span:last-child{font-variant-numeric:tabular-nums}
+.hours li.off span:last-child{color:var(--muted)}
+.hours li.today span:last-child{color:#fff}
+@media(max-width:860px){.loc{grid-template-columns:1fr}}
+/* contato */
+.contact{background:var(--navy);color:#fff}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact h2{color:#fff}
+.contact .lead{color:#C9D8EE;margin:16px 0 26px}
+form{background:var(--bg);color:var(--ink);border-radius:24px;padding:28px;display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:600;font-size:14px}
+input,select,textarea{font:inherit;font-weight:400;color:var(--ink);background:var(--soft);border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--gold);border-color:transparent}
+textarea{min-height:90px;resize:vertical}
+form .small{font-size:13px;color:var(--muted)}
+.err{color:#C0392B;font-size:13px;min-height:1em}
+@media(max-width:860px){.contact .grid{grid-template-columns:1fr;gap:32px}}
+/* footer */
+footer{background:#0C1830;color:#BCCBE3;padding:56px 0 90px;font-size:15px}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:30px}
+footer h4{color:#fff;margin:0 0 12px;font-family:Fraunces,Georgia,serif;font-size:17px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+footer a{text-decoration:none}footer a:hover{color:#fff;text-decoration:underline}
+footer .copy{margin-top:34px;padding-top:18px;border-top:1px solid #20335A;font-size:13px}
+@media(max-width:860px){footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer .cols{grid-template-columns:1fr}}
+.demo{position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:60;background:rgba(14,28,56,.9);color:#DCE9F7;font-size:12px;padding:7px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(6px)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="shield" viewBox="0 0 40 40"><path d="M6 6h28v17c0 7-8 11-14 14C14 34 6 30 6 23z" fill="#14284B" stroke="#fff" stroke-width="2"/><path d="M13 27c1-6 3-10 6-12-1 5 1 8 6 8-2 3-6 5-12 4z" fill="#fff"/><circle cx="14" cy="9.5" r="1.3" fill="#F2B93B"/><circle cx="20" cy="9.5" r="1.3" fill="#F2B93B"/><circle cx="26" cy="9.5" r="1.3" fill="#F2B93B"/></symbol>
+<symbol id="paw" viewBox="0 0 64 64"><g fill="currentColor"><ellipse cx="32" cy="42" rx="14" ry="11"/><ellipse cx="14" cy="28" rx="6" ry="8"/><ellipse cx="26" cy="17" rx="6" ry="8"/><ellipse cx="38" cy="17" rx="6" ry="8"/><ellipse cx="50" cy="28" rx="6" ry="8"/></g></symbol>
+<symbol id="dog" viewBox="0 0 64 64"><g fill="currentColor"><path d="M14 12c-6 2-9 12-7 22 5-1 9-6 10-12z"/><path d="M50 12c6 2 9 12 7 22-5-1-9-6-10-12z"/><path d="M32 10c-11 0-18 8-18 19 0 14 8 25 18 25s18-11 18-25c0-11-7-19-18-19z"/></g><g fill="#fff"><circle cx="24" cy="30" r="3"/><circle cx="40" cy="30" r="3"/><ellipse cx="32" cy="41" rx="5" ry="3.5"/></g></symbol>
+<symbol id="cat" viewBox="0 0 64 64"><g fill="currentColor"><path d="M10 8l14 10h16L54 8v26c0 12-10 22-22 22S10 46 10 34z"/></g><g fill="#fff"><ellipse cx="23" cy="33" rx="3" ry="4"/><ellipse cx="41" cy="33" rx="3" ry="4"/><path d="M29 42h6l-3 4z"/></g></symbol>
+</svg>
+
+<header id="hd">
+<div class="wrap nav">
+<a class="brand" href="#inicio" aria-label="Villa Pet Espaço Animal — início"><svg><use href="#shield"/></svg>Villa Pet</a>
+<button class="burger" id="bg" aria-label="Abrir menu" aria-expanded="false" aria-controls="nv"><span></span><span></span><span></span></button>
+<nav id="nv" aria-label="Principal"><ul>
+<li><a href="#inicio">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#contato">Contato</a></li>
+</ul></nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="inicio" style="padding-bottom:70px">
+<svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D5A94"/><stop offset="1" stop-color="#9CC0E6"/></linearGradient></defs>
+<rect width="1200" height="800" fill="url(#sk)"/>
+<g fill="#E9EFF7" opacity=".9"><rect x="640" y="60" width="150" height="520"/><rect x="800" y="150" width="120" height="430" fill="#C5D6EA"/><rect x="1000" y="40" width="160" height="540"/></g>
+<g fill="#9FB6D3" opacity=".8"><rect x="665" y="100" width="14" height="18"/><rect x="700" y="100" width="14" height="18"/><rect x="735" y="100" width="14" height="18"/><rect x="665" y="170" width="14" height="18"/><rect x="700" y="170" width="14" height="18"/><rect x="735" y="170" width="14" height="18"/><rect x="665" y="240" width="14" height="18"/><rect x="700" y="240" width="14" height="18"/><rect x="735" y="240" width="14" height="18"/><rect x="1030" y="90" width="14" height="18"/><rect x="1070" y="90" width="14" height="18"/><rect x="1110" y="90" width="14" height="18"/><rect x="1030" y="170" width="14" height="18"/><rect x="1070" y="170" width="14" height="18"/><rect x="1110" y="170" width="14" height="18"/></g>
+<rect x="560" y="360" width="520" height="260" fill="#fff"/>
+<polygon points="540,360 1100,360 1040,290 600,290" fill="#B4573A"/>
+<g stroke="#8E3F29" stroke-width="3"><path d="M650 290l-10 70M740 290l-5 70M830 290v70M920 290l5 70M1010 290l10 70"/></g>
+<rect x="610" y="410" width="200" height="130" fill="#fff" stroke="#14284B" stroke-width="6"/>
+<g stroke="#14284B" stroke-width="3"><path d="M630 410v130M650 410v130M670 410v130M690 410v130M710 410v130M730 410v130M750 410v130M770 410v130M790 410v130"/></g>
+<rect x="920" y="420" width="90" height="200" fill="#EEF3F9" stroke="#14284B" stroke-width="5"/>
+<use href="#shield" x="665" y="318" width="90" height="90"/>
+<g fill="#F2B93B"><ellipse cx="860" cy="520" rx="34" ry="50"/><circle cx="860" cy="455" r="30"/><path d="M836 438l-6-30 24 14zM884 438l6-30-24 14z"/><path d="M830 520l-44 14 6 12 40-8z"/></g>
+<rect y="620" width="1200" height="180" fill="#B9C4D3"/><rect y="620" width="1200" height="10" fill="#8F9DB0"/>
+</svg>
+<div class="wrap">
+<h1 class="in">Todo carinho que eles merecem</h1>
+<p class="lead in d2">Banho e tosa, atendimento veterinário e pet shop em Vila Itapura, Campinas.</p>
+<div class="cta in d3">
+<a class="btn btn-wa" href="#contato" data-go="wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.100-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.400 0 .6l-.4.600c-.2.200-.3.300-.1.600.2.300.8 1.300 1.700 2 1.100 1 2 1.300 2.300 1.400.3.100.4.100.6-.1l.8-1c.2-.3.400-.2.700-.1l1.900.9c.3.100.5.200.5.400.1.100.1.700-.1 1.300z"/></svg>Agendar pelo WhatsApp</a>
+<a class="btn btn-line" href="tel:+551932918032">Ligar (19) 3291-8032</a>
+</div>
+</div>
+<span class="credit">Ilustração conceitual inspirada na fachada. Não é foto oficial.</span>
+</section>
+
+<section id="sobre"><div class="wrap about">
+<div class="rv"><h2>Um espaço dedicado ao cuidado dos animais</h2>
+<p>A Villa Pet Espaço Animal fica na Vila Itapura, em Campinas. Banho e tosa, atendimento veterinário e pet shop em um só endereço, com atenção e carinho para cada pet.</p>
+<p>Conheça os serviços e fale com a equipe direto pelo WhatsApp.</p></div>
+<div class="art rv"><svg viewBox="0 0 500 400" aria-hidden="true"><rect width="500" height="400" fill="#DCE9F7"/><rect x="40" y="120" width="420" height="200" fill="#fff"/><polygon points="25,120 475,120 430,70 70,70" fill="#B4573A"/><rect x="70" y="160" width="140" height="100" fill="#fff" stroke="#14284B" stroke-width="5"/><use href="#shield" x="95" y="90" width="70" height="70"/><rect x="360" y="170" width="70" height="150" fill="#EEF3F9" stroke="#14284B" stroke-width="4"/><g fill="#F2B93B"><ellipse cx="290" cy="270" rx="26" ry="40"/><circle cx="290" cy="220" r="24"/><path d="M272 206l-5-24 19 11zM308 206l5-24-19 11z"/></g><rect y="320" width="500" height="80" fill="#B9C4D3"/></svg></div>
+</div></section>
+
+<section class="sv" id="servicos"><div class="wrap">
+<div class="head rv"><h2>Serviços</h2><p>Escolha o que seu pet precisa e continue a conversa pelo WhatsApp.</p></div>
+<div class="cards">
+<article class="card rv"><div class="pic"><svg style="color:#F2B93B"><use href="#paw"/></svg></div><div class="bd"><h3>Pet shop</h3><p>Produtos para o dia a dia do seu pet, em Vila Itapura.</p><button class="btn btn-navy" data-svc="Pet shop">Saiba mais</button></div></article>
+<article class="card rv"><div class="pic" style="background:var(--mid)"><svg style="color:#fff"><use href="#dog"/></svg></div><div class="bd"><h3>Banho e tosa</h3><p>Higiene e cuidado para deixar seu pet limpo e confortável.</p><button class="btn btn-navy" data-svc="Banho e tosa">Saiba mais</button></div></article>
+<article class="card rv"><div class="pic"><svg style="color:#fff"><use href="#cat"/></svg></div><div class="bd"><h3>Atendimento veterinário</h3><p>Clínica geral, nutrologia e neurologia, conforme o perfil da Villa Pet no Instagram.</p><button class="btn btn-navy" data-svc="Atendimento veterinário">Saiba mais</button></div></article>
+</div></div></section>
+
+<section id="diferenciais"><div class="wrap">
+<div class="head rv"><h2>O que importa para quem tem um pet</h2></div>
+<div class="vals rv">
+<div class="val"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-8-5-8-11a4.500 4.500 0 0 1 8-2.800A4.500 4.500 0 0 1 20 10c0 6-8 11-8 11z"/></svg><h3>Cuidado</h3><p>Cada pet é único e merece atenção ao seu jeito.</p></div>
+<div class="val"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/></svg><h3>Atenção</h3><p>Escuta ao tutor e olhar para os detalhes.</p></div>
+<div class="val"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg><h3>Confiança</h3><p>Informação clara antes de cada decisão.</p></div>
+<div class="val"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 14c0-4 3-8 8-8s8 4 8 8c0 3-3 5-8 5s-8-2-8-5z"/><path d="M9 13h.01M15 13h.01M10 16c1 .8 3 .8 4 0"/></svg><h3>Carinho</h3><p>Todo carinho que eles merecem.</p></div>
+</div>
+<p class="note">Textos conceituais, a validar com a Villa Pet antes da publicação.</p>
+</div></section>
+
+<section class="sv" id="galeria"><div class="wrap">
+<div class="head rv"><h2>Galeria</h2><p>Espaço reservado para as fotos reais da Villa Pet.</p></div>
+<div class="gal rv">
+<div class="tile"><svg><use href="#dog"/></svg></div>
+<div class="tile"><svg><use href="#paw"/></svg><small>Fachada e fotos reais entram aqui</small></div>
+<div class="tile"><svg><use href="#cat"/></svg></div>
+<div class="tile"><svg><use href="#paw"/></svg></div>
+<div class="tile"><svg style="width:20%"><use href="#dog"/></svg><small>Ilustração conceitual</small></div>
+</div>
+<p class="note">Nenhuma imagem desta página é foto oficial da empresa.</p>
+</div></section>
+
+<div class="ig"><div class="wrap"><div><b>Acompanhe no Instagram</b><p>@villapetespacoanimal</p></div><a class="btn btn-out" href="https://www.instagram.com/villapetespacoanimal/" target="_blank" rel="noopener">Abrir Instagram</a></div></div>
+
+<section id="local"><div class="wrap">
+<div class="head rv"><h2>Onde estamos</h2></div>
+<div class="loc">
+<div class="map rv"><svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="600" height="400" fill="var(--tile)"/><g stroke="var(--bg)" stroke-width="14" fill="none"><path d="M-10 120L610 80M-10 300L610 250M140-10L180 410M420-10L380 410"/></g><g stroke="var(--bg)" stroke-width="6" fill="none"><path d="M-10 200L610 170M280-10L300 410"/></g><circle cx="300" cy="170" r="26" fill="#14284B" opacity=".18"/><path d="M300 190c-18-20-22-30-22-40a22 22 0 0 1 44 0c0 10-4 20-22 40z" fill="#14284B"/><circle cx="300" cy="150" r="8" fill="#F2B93B"/></svg>
+<div class="pin"><address><b>Villa Pet Espaço Animal</b><br>Rua Barata Ribeiro, 437 – Vila Itapura<br>Campinas/SP · CEP 13023-030</address><a class="btn btn-navy" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Rua+Barata+Ribeiro+437+Vila+Itapura+Campinas+SP+13023-030">Abrir rota no Maps</a></div></div>
+<div class="hours rv"><h3>Funcionamento</h3><ul id="hrs">
+<li data-d="1" class="off"><span>Segunda-feira</span><span>Fechado</span></li>
+<li data-d="2" class="off"><span>Terça-feira</span><span>Fechado</span></li>
+<li data-d="3"><span>Quarta-feira</span><span>08h às 16h</span></li>
+<li data-d="4"><span>Quinta-feira</span><span>08h às 17h</span></li>
+<li data-d="5"><span>Sexta-feira</span><span>08h às 17h</span></li>
+<li data-d="6"><span>Sábado</span><span>08h às 13h</span></li>
+<li data-d="0" class="off"><span>Domingo</span><span>Fechado</span></li>
+</ul><p class="note">Horários a confirmar com a Villa Pet.</p></div>
+</div></div></section>
+
+<section class="contact" id="contato"><div class="wrap grid">
+<div class="rv"><h2>Vamos cuidar do seu pet?</h2>
+<p class="lead">Preencha os dados e continue no WhatsApp. A mensagem já vai pronta, é só enviar.</p>
+<a class="btn btn-line" href="tel:+551932918032">Ou ligue: (19) 3291-8032</a></div>
+<form id="fm" class="rv" novalidate>
+<label>Nome do responsável<input id="f1" autocomplete="name" required></label>
+<label>Nome do pet<input id="f2" required></label>
+<label>Serviço desejado<select id="f3"><option>Pet shop</option><option>Banho e tosa</option><option>Atendimento veterinário</option></select></label>
+<label>Observações<textarea id="f4"></textarea></label>
+<div class="err" id="er" role="alert"></div>
+<button class="btn btn-wa" type="submit">Continuar no WhatsApp</button>
+<p class="small">O WhatsApp abre com o texto preenchido. Você envia a mensagem manualmente. Este formulário não faz agendamento nem confirma horário.</p>
+</form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="cols">
+<div><h4>Villa Pet Espaço Animal</h4><p>Todo carinho que eles merecem.</p></div>
+<div><h4>Contato</h4><ul><li>Rua Barata Ribeiro, 437<br>Vila Itapura, Campinas/SP<br>CEP 13023-030</li><li><a href="tel:+551932918032">(19) 3291-8032</a></li><li><a href="https://wa.me/551932918032" target="_blank" rel="noopener">WhatsApp</a></li></ul></div>
+<div><h4>Horários</h4><ul><li>Qua: 08h às 16h</li><li>Qui e sex: 08h às 17h</li><li>Sáb: 08h às 13h</li><li>Seg, ter e dom: fechado</li></ul></div>
+<div><h4>Navegação</h4><ul><li><a href="#inicio">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#contato">Contato</a></li><li><a href="https://www.instagram.com/villapetespacoanimal/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+</div>
+<p class="copy">Demonstração conceitual de website. Imagens ilustrativas e textos sujeitos à confirmação da empresa.</p>
+</div></footer>
+<div class="demo">Demonstração conceitual</div>
+
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)},hd=$('#hd'),bg=$('#bg'),nv=$('#nv');
+function sc(){hd.classList.toggle('solid',window.scrollY>40)}sc();addEventListener('scroll',sc,{passive:true});
+bg.addEventListener('click',function(){var o=nv.classList.toggle('open');bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');hd.classList.toggle('solid',o||window.scrollY>40)});
+nv.addEventListener('click',function(e){if(e.target.tagName==='A'){nv.classList.remove('open');bg.setAttribute('aria-expanded','false')}});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+var d=new Date().getDay(),t=document.querySelector('#hrs li[data-d="'+d+'"]');if(t)t.classList.add('today');
+var sel=$('#f3');
+document.querySelectorAll('[data-svc]').forEach(function(b){b.addEventListener('click',function(){sel.value=b.dataset.svc;$('#contato').scrollIntoView({behavior:'smooth'});setTimeout(function(){$('#f1').focus({preventScroll:true})},600)})});
+$('#fm').addEventListener('submit',function(e){e.preventDefault();
+var n=$('#f1').value.trim(),p=$('#f2').value.trim(),o=$('#f4').value.trim(),er=$('#er');
+if(!n||!p){er.textContent='Preencha o nome do responsável e o nome do pet.';return}
+er.textContent='';
+var m='Olá! Vim pelo site da Villa Pet e gostaria de atendimento.\n\nResponsável: '+n+'\nPet: '+p+'\nServiço: '+sel.value+(o?'\nObservações: '+o:'');
+var u='https://wa.me/551932918032?text='+encodeURIComponent(m);
+var w=window.open(u,'_blank','noopener');if(!w)location.href=u});
+document.querySelector('[data-go="wa"]').addEventListener('click',function(){setTimeout(function(){$('#f1').focus({preventScroll:true})},700)});
+})();
+</script>
+</body>
+</html>
